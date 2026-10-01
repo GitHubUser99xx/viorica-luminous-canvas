@@ -4,6 +4,10 @@ import { useState } from "react";
 
 import editorialImage from "@/assets/editorial-makeup.jpg.asset.json";
 import heroImage from "@/assets/hero-beauty.jpg.asset.json";
+import portfolioBridal from "@/assets/portfolio-bridal.jpg.asset.json";
+import portfolioCreative from "@/assets/portfolio-creative.jpg.asset.json";
+import portfolioDetail from "@/assets/portfolio-detail.jpg.asset.json";
+import portfolioOccasion from "@/assets/portfolio-occasion.jpg.asset.json";
 import vioricaPortrait from "@/assets/viorica-portrait.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
