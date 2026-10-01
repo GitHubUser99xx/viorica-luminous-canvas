@@ -185,7 +185,7 @@ function Index() {
           <p className="section-label text-accent-foreground/70">Bookings & enquiries</p>
           <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
             <h2 className="max-w-4xl font-display text-6xl leading-[.88] sm:text-8xl lg:text-9xl">Let’s create<br /><span className="font-display-italic">your look.</span></h2>
-            <a href="mailto:hello@vioricalungu.com?subject=Makeup%20booking%20enquiry" className="group inline-flex size-36 items-center justify-center gap-2 rounded-full border border-accent-foreground text-center text-xs font-bold uppercase tracking-normal transition-colors hover:bg-accent-foreground hover:text-accent sm:size-44">
+            <a href="mailto:burnaby991@yahoo.ca?subject=Makeup%20booking%20enquiry" className="group inline-flex size-36 items-center justify-center gap-2 rounded-full border border-accent-foreground text-center text-xs font-bold uppercase tracking-normal transition-colors hover:bg-accent-foreground hover:text-accent sm:size-44">
               Enquire now <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
             </a>
           </div>
