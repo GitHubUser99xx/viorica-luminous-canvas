@@ -196,6 +196,11 @@ function Index() {
         <div className="mx-auto grid max-w-[90rem] gap-4 text-xs uppercase tracking-normal sm:grid-cols-[1fr_auto]">
           <p>© 2026 Viorica Lungu</p><p>Makeup artist · Beauty & editorial</p>
         </div>
+        <div className="mx-auto mt-4 max-w-[90rem] text-xs uppercase tracking-normal text-ink-muted/70">
+          <p>
+            Designed &amp; Developed by <a href="https://www.facebook.com/florentinavi" target="_blank" rel="noopener noreferrer" className="underline-offset-4 transition-colors hover:text-ink-muted hover:underline">Rodi</a>
+          </p>
+        </div>
       </footer>
     </main>
   );
