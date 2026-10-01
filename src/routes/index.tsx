@@ -1,24 +1,202 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
+import { useState } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import editorialImage from "@/assets/editorial-makeup.jpg.asset.json";
+import heroImage from "@/assets/hero-beauty.jpg.asset.json";
+import vioricaPortrait from "@/assets/viorica-portrait.jpg.asset.json";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Viorica Lungu — Makeup Artist" },
+      {
+        name: "description",
+        content:
+          "Discover the beauty portfolio of Viorica Lungu, a makeup artist creating luminous bridal, editorial and occasion looks.",
+      },
+      { property: "og:title", content: "Viorica Lungu — Makeup Artist" },
+      {
+        property: "og:description",
+        content: "Artistry in every detail. Explore bridal, editorial and creative makeup by Viorica Lungu.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const services = [
+  {
+    number: "01",
+    title: "Bridal",
+    text: "Timeless, luminous makeup designed to feel effortless from the first photograph to the final dance.",
+  },
+  {
+    number: "02",
+    title: "Editorial",
+    text: "Expressive beauty looks shaped for the lens, fashion stories, campaigns and creative collaborations.",
+  },
+  {
+    number: "03",
+    title: "Occasion",
+    text: "Polished, personal makeup for celebrations, portraits and every moment worth remembering.",
+  },
+  {
+    number: "04",
+    title: "Creative",
+    text: "Concept-led artistry where colour, texture and light become an unforgettable visual statement.",
+  },
+];
+
 function Index() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="overflow-hidden bg-background text-foreground">
+      <header className="absolute inset-x-0 top-0 z-30 border-b border-hero-line text-hero-foreground">
+        <div className="mx-auto grid h-20 max-w-[90rem] grid-cols-[minmax(0,1fr)_auto] items-center px-5 sm:h-24 sm:px-10 lg:px-16">
+          <a href="#top" className="min-w-0 font-display text-xl uppercase tracking-normal sm:text-2xl">
+            Viorica Lungu
+          </a>
+          <nav className="hidden items-center gap-9 text-xs font-semibold uppercase tracking-normal md:flex" aria-label="Main navigation">
+            <a className="nav-link" href="#work">Portfolio</a>
+            <a className="nav-link" href="#about">About</a>
+            <a className="nav-link" href="#services">Services</a>
+            <a className="nav-link" href="#contact">Contact</a>
+          </nav>
+          <button
+            type="button"
+            className="grid size-11 place-items-center text-hero-foreground md:hidden"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </button>
+        </div>
+        {menuOpen && (
+          <nav className="border-t border-hero-line bg-overlay px-5 py-7 md:hidden" aria-label="Mobile navigation">
+            <div className="flex flex-col gap-5 text-2xl font-display">
+              <a href="#work" onClick={closeMenu}>Portfolio</a>
+              <a href="#about" onClick={closeMenu}>About</a>
+              <a href="#services" onClick={closeMenu}>Services</a>
+              <a href="#contact" onClick={closeMenu}>Contact</a>
+            </div>
+          </nav>
+        )}
+      </header>
+
+      <section id="top" className="relative min-h-[92svh] text-hero-foreground">
+        <img
+          src={heroImage.url}
+          alt="Pearlescent editorial makeup with blue and violet reflections"
+          className="absolute inset-0 size-full object-cover object-[67%_center]"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-hero-shade" />
+        <div className="relative mx-auto flex min-h-[92svh] max-w-[90rem] flex-col justify-end px-5 pb-10 pt-32 sm:px-10 sm:pb-14 lg:px-16">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-normal text-hero-muted sm:text-sm">
+            Makeup artist · Beauty storyteller
+          </p>
+          <h1 className="max-w-5xl font-display text-[clamp(4rem,11vw,9.5rem)] leading-[0.8]">
+            Beauty,<br /><span className="font-display-italic">transformed.</span>
+          </h1>
+          <div className="mt-9 grid gap-7 border-t border-hero-line pt-7 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <p className="max-w-md text-sm leading-7 text-hero-muted sm:text-base">
+              Refined makeup artistry created to reveal character, hold emotion and live beautifully in every light.
+            </p>
+            <a className="group inline-flex w-fit items-center gap-3 border-b border-current pb-2 text-xs font-bold uppercase tracking-normal" href="#contact">
+              Book an appointment
+              <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
+            </a>
+          </div>
+          <a href="#work" aria-label="Explore portfolio" className="absolute bottom-11 right-5 hidden size-12 place-items-center rounded-full border border-hero-line transition-colors hover:bg-hero-soft sm:grid lg:right-16">
+            <ArrowDown className="size-4" aria-hidden="true" />
+          </a>
+        </div>
+      </section>
+
+      <section id="work" className="bg-surface py-24 sm:py-32">
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <div className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1fr_2fr] lg:items-end">
+            <p className="section-label">Selected artistry</p>
+            <h2 className="font-display text-5xl leading-none sm:text-7xl lg:text-8xl">The art of<br /><span className="font-display-italic text-accent">the close-up.</span></h2>
+          </div>
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
+            <figure className="group overflow-hidden bg-muted">
+              <img src={editorialImage.url} alt="Luminous lavender editorial makeup with pearl details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+            </figure>
+            <div className="pb-3 lg:pb-12">
+              <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
+                Each look begins with the person—not a trend. Skin remains alive, details feel intentional, and every finish is shaped for the moment.
+              </p>
+              <div className="grid grid-cols-2 gap-x-5 border-t border-border pt-5 text-xs uppercase tracking-normal text-muted-foreground">
+                <span>Editorial beauty</span><span className="text-right">Pearl study</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="bg-background py-24 sm:py-32">
+        <div className="mx-auto grid max-w-[90rem] gap-12 px-5 sm:px-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-24 lg:px-16">
+          <div className="relative">
+            <img src={vioricaPortrait.url} alt="Portrait of makeup artist Viorica Lungu beside pink flowers" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+            <p className="absolute bottom-0 right-0 bg-background px-5 py-4 text-xs uppercase tracking-normal">Viorica Lungu</p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="section-label">About the artist</p>
+            <h2 className="mt-8 font-display text-5xl leading-[.98] sm:text-7xl">A practiced eye.<br /><span className="font-display-italic text-accent">A personal touch.</span></h2>
+            <div className="mt-10 max-w-2xl space-y-5 text-base leading-8 text-muted-foreground sm:text-lg">
+              <p>Viorica Lungu is a makeup artist with many years of experience in artistic makeup design. Her work is guided by an instinct for colour, balance and the subtle details that make each face distinct.</p>
+              <p>From natural radiance to expressive editorial looks, Viorica approaches every client with care and calm precision. The result is makeup that feels considered, photographs beautifully and still feels completely like you.</p>
+            </div>
+            <a className="group mt-10 inline-flex w-fit items-center gap-3 border-b border-foreground pb-2 text-xs font-bold uppercase tracking-normal" href="#contact">
+              Work with Viorica <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="bg-ink py-24 text-ink-foreground sm:py-32">
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <p className="section-label text-ink-muted">Services</p>
+          <h2 className="mt-8 max-w-3xl font-display text-5xl leading-none sm:text-7xl">Made for your<br /><span className="font-display-italic text-accent-soft">moment.</span></h2>
+          <div className="mt-16 divide-y divide-ink-line border-y border-ink-line">
+            {services.map((service) => (
+              <article key={service.number} className="group grid gap-4 py-7 sm:grid-cols-[4rem_1fr_1fr] sm:items-center sm:gap-8 sm:py-9">
+                <span className="text-xs text-ink-muted">{service.number}</span>
+                <h3 className="font-display text-3xl sm:text-4xl">{service.title}</h3>
+                <p className="max-w-md text-sm leading-7 text-ink-muted transition-colors group-hover:text-ink-foreground">{service.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-accent py-24 text-accent-foreground sm:py-32">
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <p className="section-label text-accent-foreground/70">Bookings & enquiries</p>
+          <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+            <h2 className="max-w-4xl font-display text-6xl leading-[.88] sm:text-8xl lg:text-9xl">Let’s create<br /><span className="font-display-italic">your look.</span></h2>
+            <a href="mailto:hello@vioricalungu.com?subject=Makeup%20booking%20enquiry" className="group inline-flex size-36 items-center justify-center gap-2 rounded-full border border-accent-foreground text-center text-xs font-bold uppercase tracking-normal transition-colors hover:bg-accent-foreground hover:text-accent sm:size-44">
+              Enquire now <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-ink px-5 py-8 text-ink-muted sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-[90rem] gap-4 text-xs uppercase tracking-normal sm:grid-cols-[1fr_auto]">
+          <p>© 2026 Viorica Lungu</p><p>Makeup artist · Beauty & editorial</p>
+        </div>
+      </footer>
+    </main>
   );
 }
