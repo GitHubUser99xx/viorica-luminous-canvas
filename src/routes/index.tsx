@@ -145,6 +145,69 @@ function Index() {
               </div>
             </div>
           </div>
+
+          <div className="mt-24 grid gap-8 lg:grid-cols-[.75fr_1.25fr] lg:items-end">
+            <div className="pb-3 lg:pb-12 lg:text-right">
+              <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground lg:ml-auto">
+                A bridal look that stays weightless through every embrace, toast and tear—soft light, real skin, quiet confidence.
+              </p>
+              <div className="grid grid-cols-2 gap-x-5 border-t border-border pt-5 text-xs uppercase tracking-normal text-muted-foreground">
+                <span>Bridal beauty</span><span className="text-right">Ivory & rose</span>
+              </div>
+            </div>
+            <figure className="group overflow-hidden bg-muted lg:order-first">
+              <img src={portfolioBridal.url} alt="Soft romantic bridal makeup with ivory tones and baby's breath flowers" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="creative" className="bg-ink py-24 text-ink-foreground sm:py-32">
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <div className="grid gap-8 border-b border-ink-line pb-10 lg:grid-cols-[1fr_2fr] lg:items-end">
+            <p className="section-label text-ink-muted">Creative study</p>
+            <h2 className="font-display text-5xl leading-none sm:text-7xl">Colour as<br /><span className="font-display-italic text-accent-soft">a language.</span></h2>
+          </div>
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
+            <figure className="group overflow-hidden bg-muted">
+              <img src={portfolioCreative.url} alt="Bold creative makeup with emerald and gold pigments and gold leaf details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+            </figure>
+            <div className="pb-3 lg:pb-12">
+              <p className="mb-8 max-w-md text-lg leading-8 text-ink-muted">
+                Concept work where pigment, texture and gold leaf are composed like jewellery—made to hold the frame and stop the scroll.
+              </p>
+              <div className="grid grid-cols-2 gap-x-5 border-t border-ink-line pt-5 text-xs uppercase tracking-normal text-ink-muted">
+                <span>Editorial artistry</span><span className="text-right">Emerald & gold</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="occasion" className="bg-surface py-24 sm:py-32">
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <div className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1fr_2fr] lg:items-end">
+            <p className="section-label">Occasion & detail</p>
+            <h2 className="font-display text-5xl leading-none sm:text-7xl">Glow that<br /><span className="font-display-italic text-accent">stays golden.</span></h2>
+          </div>
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+            <figure className="group overflow-hidden bg-muted">
+              <img src={portfolioOccasion.url} alt="Polished occasion makeup in warm bronze and champagne tones at golden hour" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+            </figure>
+            <div className="grid gap-8">
+              <figure className="group overflow-hidden bg-muted">
+                <img src={portfolioDetail.url} alt="Close-up detail of copper and bronze eye makeup with gold shimmer" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              </figure>
+              <div className="pb-3">
+                <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
+                  From gala evenings to intimate portraits—warm, radiant finishes built on flawless blending and a highlight that catches every candle.
+                </p>
+                <div className="grid grid-cols-2 gap-x-5 border-t border-border pt-5 text-xs uppercase tracking-normal text-muted-foreground">
+                  <span>Occasion beauty</span><span className="text-right">Amber hour</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
