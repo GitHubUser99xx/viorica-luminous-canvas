@@ -97,7 +97,7 @@ function Index() {
 
       <section id="top" className="relative min-h-[92svh] text-hero-foreground">
         <img
-          src={heroImage.url}
+          src={heroImage}
           alt="Pearlescent editorial makeup with blue and violet reflections"
           className="absolute inset-0 size-full object-cover object-[67%_center]"
           fetchPriority="high"
@@ -213,7 +213,7 @@ function Index() {
       <section id="about" className="bg-background py-24 sm:py-32">
         <div className="mx-auto grid max-w-[90rem] gap-12 px-5 sm:px-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-24 lg:px-16">
           <div className="relative">
-            <img src={vioricaPortrait.url} alt="Portrait of makeup artist Viorica Lungu beside pink flowers" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+            <img src={vioricaPortrait} alt="Portrait of makeup artist Viorica Lungu beside pink flowers" className="aspect-[4/5] w-full object-cover" loading="lazy" />
             <p className="absolute bottom-0 right-0 bg-background px-5 py-4 text-xs uppercase tracking-normal">Viorica Lungu</p>
           </div>
           <div className="flex flex-col justify-center">
