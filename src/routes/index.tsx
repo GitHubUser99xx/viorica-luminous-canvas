@@ -133,7 +133,7 @@ function Index() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
             <figure className="group overflow-hidden bg-muted">
-              <img src={editorialImage.url} alt="Luminous lavender editorial makeup with pearl details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src={editorialImage} alt="Luminous lavender editorial makeup with pearl details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
             </figure>
             <div className="pb-3 lg:pb-12">
               <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
@@ -155,7 +155,7 @@ function Index() {
               </div>
             </div>
             <figure className="group overflow-hidden bg-muted lg:order-first">
-              <img src={portfolioBridal.url} alt="Soft romantic bridal makeup with ivory tones and baby's breath flowers" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src={portfolioBridal} alt="Soft romantic bridal makeup with ivory tones and baby's breath flowers" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -169,7 +169,7 @@ function Index() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
             <figure className="group overflow-hidden bg-muted">
-              <img src={portfolioCreative.url} alt="Bold creative makeup with emerald and gold pigments and gold leaf details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src={portfolioCreative} alt="Bold creative makeup with emerald and gold pigments and gold leaf details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
             </figure>
             <div className="pb-3 lg:pb-12">
               <p className="mb-8 max-w-md text-lg leading-8 text-ink-muted">
@@ -191,11 +191,11 @@ function Index() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
             <figure className="group overflow-hidden bg-muted">
-              <img src={portfolioOccasion.url} alt="Polished occasion makeup in warm bronze and champagne tones at golden hour" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src={portfolioOccasion} alt="Polished occasion makeup in warm bronze and champagne tones at golden hour" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
             </figure>
             <div className="grid gap-8">
               <figure className="group overflow-hidden bg-muted">
-                <img src={portfolioDetail.url} alt="Close-up detail of copper and bronze eye makeup with gold shimmer" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+                <img src={portfolioDetail} alt="Close-up detail of copper and bronze eye makeup with gold shimmer" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
               </figure>
               <div className="pb-3">
                 <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
