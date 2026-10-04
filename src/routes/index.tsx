@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
-const editorialImage = "/img1.jpeg";
+const editorialImage = "/img1.jpg";
 const heroImage = "/img2.jpg";
-const portfolioBridal = "/img3.jpeg";
-const portfolioCreative = "/img4.jpeg";
-const portfolioDetail = "/img1.jpeg";
+const portfolioBridal = "/img3.jpg";
+const portfolioCreative = "/img4.jpg";
+const portfolioDetail = "/img1.jpg";
 const portfolioOccasion = "/img2.jpg";
 const vioricaPortrait = "/img3.jpg";
 
