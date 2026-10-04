@@ -1,6 +1,8 @@
+```tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
+
 const editorialImage = "/img1.jpg";
 const heroImage = "/img2.jpg";
 const portfolioBridal = "/img3.jpg";
@@ -97,7 +99,7 @@ function Index() {
 
       <section id="top" className="relative min-h-[92svh] text-hero-foreground">
         <img
-          src={heroImage}
+          src="/img2.jpg"
           alt="Pearlescent editorial makeup with blue and violet reflections"
           className="absolute inset-0 size-full object-cover object-[67%_center]"
           fetchPriority="high"
@@ -133,7 +135,7 @@ function Index() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
             <figure className="group overflow-hidden bg-muted">
-              <img src={editorialImage} alt="Luminous lavender editorial makeup with pearl details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" />
+              <img src="/img1.jpg" alt="Luminous lavender editorial makeup with pearl details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" />
             </figure>
             <div className="pb-3 lg:pb-12">
               <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
@@ -155,7 +157,7 @@ function Index() {
               </div>
             </div>
             <figure className="group overflow-hidden bg-muted lg:order-first">
-              <img src={portfolioBridal} alt="Soft romantic bridal makeup with ivory tones and baby's breath flowers" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src="/img3.jpg" alt="Soft romantic bridal makeup with ivory tones and baby's breath flowers" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -169,7 +171,7 @@ function Index() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
             <figure className="group overflow-hidden bg-muted">
-              <img src={portfolioCreative} alt="Bold creative makeup with emerald and gold pigments and gold leaf details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src="/img4.jpg" alt="Bold creative makeup with emerald and gold pigments and gold leaf details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
             </figure>
             <div className="pb-3 lg:pb-12">
               <p className="mb-8 max-w-md text-lg leading-8 text-ink-muted">
@@ -191,11 +193,11 @@ function Index() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
             <figure className="group overflow-hidden bg-muted">
-              <img src={portfolioOccasion} alt="Polished occasion makeup in warm bronze and champagne tones at golden hour" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src="/img2.jpg" alt="Polished occasion makeup in warm bronze and champagne tones at golden hour" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
             </figure>
             <div className="grid gap-8">
               <figure className="group overflow-hidden bg-muted">
-                <img src={portfolioDetail} alt="Close-up detail of copper and bronze eye makeup with gold shimmer" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+                <img src="/img1.jpg" alt="Close-up detail of copper and bronze eye makeup with gold shimmer" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
               </figure>
               <div className="pb-3">
                 <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
@@ -213,7 +215,7 @@ function Index() {
       <section id="about" className="bg-background py-24 sm:py-32">
         <div className="mx-auto grid max-w-[90rem] gap-12 px-5 sm:px-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-24 lg:px-16">
           <div className="relative">
-            <img src={vioricaPortrait} alt="Portrait of makeup artist Viorica Lungu beside pink flowers" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+            <img src="/img3.jpg" alt="Portrait of makeup artist Viorica Lungu beside pink flowers" className="aspect-[4/5] w-full object-cover" loading="lazy" />
             <p className="absolute bottom-0 right-0 bg-background px-5 py-4 text-xs uppercase tracking-normal">Viorica Lungu</p>
           </div>
           <div className="flex flex-col justify-center">
@@ -271,3 +273,6 @@ function Index() {
     </main>
   );
 }
+```
+
+This version keeps the **same page structure and content** and changes only the image sources to direct public paths.
