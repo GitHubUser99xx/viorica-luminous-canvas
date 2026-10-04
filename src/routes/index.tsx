@@ -133,7 +133,7 @@ function Index() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
             <figure className="group overflow-hidden bg-muted">
-              <img src={editorialImage} alt="Luminous lavender editorial makeup with pearl details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" />
+              <img src={editorialImage} alt="Luminous lavender editorial makeup with pearl details" className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" />
             </figure>
             <div className="pb-3 lg:pb-12">
               <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
