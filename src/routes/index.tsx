@@ -243,5 +243,232 @@ function Index() {
           <div className="grid gap-8 border-b border-ink-line pb-10 lg:grid-cols-[1fr_2fr] lg:items-end">
             <p className="section-label text-ink-muted">Creative study</p>
 
-           
+            <h2 className="font-display text-5xl leading-none sm:text-7xl">
+              Colour as
+              <br />
+              <span className="font-display-italic text-accent-soft">
+                a language.
+              </span>
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
+            <figure className="group overflow-hidden bg-muted">
+              <img
+                src="/img4.jpeg"
+                alt="Bold creative makeup with emerald and gold pigments and gold leaf details"
+                className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+              />
+            </figure>
+
+            <div className="pb-3 lg:pb-12">
+              <p className="mb-8 max-w-md text-lg leading-8 text-ink-muted">
+                Concept work where pigment, texture and gold leaf are composed
+                like jewellery—made to hold the frame and stop the scroll.
+              </p>
+
+              <div className="grid grid-cols-2 gap-x-5 border-t border-ink-line pt-5 text-xs uppercase tracking-normal text-ink-muted">
+                <span>Editorial artistry</span>
+                <span className="text-right">Emerald & gold</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="occasion" className="bg-surface py-24 sm:py-32">
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <div className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1fr_2fr] lg:items-end">
+            <p className="section-label">Occasion & detail</p>
+
+            <h2 className="font-display text-5xl leading-none sm:text-7xl">
+              Glow that
+              <br />
+              <span className="font-display-italic text-accent">
+                stays golden.
+              </span>
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+            <figure className="group overflow-hidden bg-muted">
+              <img
+                src="/img2.jpg"
+                alt="Polished occasion makeup in warm bronze and champagne tones at golden hour"
+                className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+              />
+            </figure>
+
+            <div className="grid gap-8">
+              <figure className="group overflow-hidden bg-muted">
+                <img
+                  src="/img1.jpeg"
+                  alt="Close-up detail of copper and bronze eye makeup with gold shimmer"
+                  className="aspect-[4/5] size-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+                />
+              </figure>
+
+              <div className="pb-3">
+                <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
+                  From gala evenings to intimate portraits—warm, radiant
+                  finishes built on flawless blending and a highlight that
+                  catches every candle.
+                </p>
+
+                <div className="grid grid-cols-2 gap-x-5 border-t border-border pt-5 text-xs uppercase tracking-normal text-muted-foreground">
+                  <span>Occasion beauty</span>
+                  <span className="text-right">Amber hour</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="bg-background py-24 sm:py-32">
+        <div className="mx-auto grid max-w-[90rem] gap-12 px-5 sm:px-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-24 lg:px-16">
+          <div className="relative">
+            <img
+              src="/img3.jpeg"
+              alt="Portrait of makeup artist Viorica Lungu beside pink flowers"
+              className="aspect-[4/5] w-full object-cover"
+            />
+
+            <p className="absolute bottom-0 right-0 bg-background px-5 py-4 text-xs uppercase tracking-normal">
+              Viorica Lungu
+            </p>
+          </div>
+
+          <div className="flex flex-col justify-center">
+            <p className="section-label">About the artist</p>
+
+            <h2 className="mt-8 font-display text-5xl leading-[.98] sm:text-7xl">
+              A practiced eye.
+              <br />
+              <span className="font-display-italic text-accent">
+                A personal touch.
+              </span>
+            </h2>
+
+            <div className="mt-10 max-w-2xl space-y-5 text-base leading-8 text-muted-foreground sm:text-lg">
+              <p>
+                Viorica Lungu is a makeup artist with many years of experience
+                in artistic makeup design. Her work is guided by an instinct
+                for colour, balance and the subtle details that make each face
+                distinct.
+              </p>
+
+              <p>
+                From natural radiance to expressive editorial looks, Viorica
+                approaches every client with care and calm precision. The
+                result is makeup that feels considered, photographs beautifully
+                and still feels completely like you.
+              </p>
+            </div>
+
+            <a
+              className="group mt-10 inline-flex w-fit items-center gap-3 border-b border-foreground pb-2 text-xs font-bold uppercase tracking-normal"
+              href="#contact"
+            >
+              Work with Viorica
+              <ArrowUpRight
+                className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="services"
+        className="bg-ink py-24 text-ink-foreground sm:py-32"
+      >
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <p className="section-label text-ink-muted">Services</p>
+
+          <h2 className="mt-8 max-w-3xl font-display text-5xl leading-none sm:text-7xl">
+            Made for your
+            <br />
+            <span className="font-display-italic text-accent-soft">
+              moment.
+            </span>
+          </h2>
+
+          <div className="mt-16 divide-y divide-ink-line border-y border-ink-line">
+            {services.map((service) => (
+              <article
+                key={service.number}
+                className="group grid gap-4 py-7 sm:grid-cols-[4rem_1fr_1fr] sm:items-center sm:gap-8 sm:py-9"
+              >
+                <span className="text-xs text-ink-muted">
+                  {service.number}
+                </span>
+
+                <h3 className="font-display text-3xl sm:text-4xl">
+                  {service.title}
+                </h3>
+
+                <p className="max-w-md text-sm leading-7 text-ink-muted transition-colors group-hover:text-ink-foreground">
+                  {service.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        className="bg-accent py-24 text-accent-foreground sm:py-32"
+      >
+        <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
+          <p className="section-label text-accent-foreground/70">
+            Bookings & enquiries
+          </p>
+
+          <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+            <h2 className="max-w-4xl font-display text-6xl leading-[.88] sm:text-8xl lg:text-9xl">
+              Let’s create
+              <br />
+              <span className="font-display-italic">your look.</span>
+            </h2>
+
+            <a
+              href="mailto:burnaby991@yahoo.ca?subject=Makeup%20booking%20enquiry"
+              className="group inline-flex size-36 items-center justify-center gap-2 rounded-full border border-accent-foreground text-center text-xs font-bold uppercase tracking-normal transition-colors hover:bg-accent-foreground hover:text-accent sm:size-44"
+            >
+              Enquire now
+              <ArrowUpRight
+                className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-ink px-5 py-8 text-ink-muted sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-[90rem] gap-4 text-xs uppercase tracking-normal sm:grid-cols-[1fr_auto]">
+          <p>© 2026 Viorica Lungu</p>
+          <p>Makeup artist · Beauty & editorial</p>
+        </div>
+
+        <div className="mx-auto mt-4 max-w-[90rem] text-xs uppercase tracking-normal text-ink-muted/70">
+          <p>
+            Designed &amp; Developed by{" "}
+            <a
+              href="https://www.facebook.com/florentinavi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 transition-colors hover:text-ink-muted hover:underline"
+            >
+              Rodi
+            </a>
+          </p>
+        </div>
+      </footer>
+    </main>
+  );
+}
 ```
