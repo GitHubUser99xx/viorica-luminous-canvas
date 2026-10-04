@@ -1,14 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
-
-import editorialImage from "@/assets/editorial-makeup.jpg.asset.json";
-import heroImage from "@/assets/hero-beauty.jpg.asset.json";
-import portfolioBridal from "@/assets/portfolio-bridal.jpg.asset.json";
-import portfolioCreative from "@/assets/portfolio-creative.jpg.asset.json";
-import portfolioDetail from "@/assets/portfolio-detail.jpg.asset.json";
-import portfolioOccasion from "@/assets/portfolio-occasion.jpg.asset.json";
-import vioricaPortrait from "@/assets/viorica-portrait.jpg.asset.json";
+const editorialImage = "/img1.jpg";
+const heroImage = "/img2.jpg";
+const portfolioBridal = "/img3.jpg";
+const portfolioCreative = "/img4.jpg";
+const portfolioDetail = "/img1.jpg";
+const portfolioOccasion = "/img2.jpg";
+const vioricaPortrait = "/img3.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
