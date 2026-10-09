@@ -177,45 +177,44 @@ function Index() {
           </nav>
         )}
       </header>
-
       <section
         id="top"
-        className="relative min-h-[92svh] text-hero-foreground"
+        className="relative isolate min-h-[780px] overflow-hidden text-hero-foreground sm:min-h-[92svh]"
       >
         <img
           src={heroImage}
           alt="Viorica Lungu, makeup artist"
-          className="absolute inset-0 size-full object-cover object-[67%_center]"
+          className="absolute inset-0 size-full object-cover object-[60%_center] sm:object-[67%_center]"
           fetchPriority="high"
         />
 
         <div className="absolute inset-0 bg-hero-shade" />
 
-        <div className="relative mx-auto flex min-h-[92svh] max-w-[90rem] flex-col justify-end px-5 pb-10 pt-40 sm:px-10 sm:pb-14 sm:pt-44 lg:px-16">
+        <div className="relative mx-auto flex min-h-[780px] max-w-[90rem] flex-col justify-end px-5 pb-16 pt-40 sm:min-h-[92svh] sm:px-10 sm:pb-14 sm:pt-44 lg:px-16">
           <p
             style={handwrittenStyle}
-            className="mb-5 text-xl text-hero-muted sm:text-2xl"
+            className="mb-4 text-lg text-hero-muted sm:mb-5 sm:text-2xl"
           >
             Makeup artist · Beauty storyteller
           </p>
 
-          <h1 className="max-w-5xl font-display text-[clamp(4rem,11vw,9.5rem)] leading-[0.8]">
+          <h1 className="max-w-5xl font-display text-[clamp(3.5rem,12vw,5.5rem)] leading-[0.9] sm:text-[clamp(4rem,8vw,9.5rem)] sm:leading-[0.8]">
             Beauty,
             <br />
             <span className="font-display-italic">transformed.</span>
           </h1>
 
-          <div className="mt-9 grid gap-7 border-t border-hero-line pt-7 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+          <div className="mt-7 grid gap-5 border-t border-hero-line pt-5 sm:mt-9 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:gap-7 sm:pt-7">
             <p
               style={handwrittenStyle}
-              className="max-w-xl text-lg leading-9 text-hero-muted sm:text-xl sm:leading-10"
+              className="max-w-xl text-base leading-7 text-hero-muted sm:text-xl sm:leading-10"
             >
               Refined makeup artistry created to reveal character, hold emotion
               and live beautifully in every light.
             </p>
 
             <a
-              className="group inline-flex w-fit items-center gap-3 border-b border-current pb-2 text-lg font-bold transition-colors hover:text-amber-300"
+              className="group inline-flex w-fit items-center gap-3 border-b border-current pb-2 text-base font-bold transition-colors hover:text-amber-300 sm:text-lg"
               style={handwrittenStyle}
               href="#contact"
             >
