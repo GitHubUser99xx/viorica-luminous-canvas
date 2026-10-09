@@ -177,34 +177,39 @@ function Index() {
           </nav>
         )}
       </header>
+
+      {/* HERO: separate image and text on mobile; overlay on desktop */}
       <section
         id="top"
-        className="relative isolate min-h-[780px] overflow-hidden text-hero-foreground sm:min-h-[92svh]"
+        className="relative bg-background text-hero-foreground sm:min-h-[92svh] sm:bg-transparent"
       >
-        <img
-          src={heroImage}
-          alt="Viorica Lungu, makeup artist"
-          className="absolute inset-0 size-full object-cover object-[60%_center] sm:object-[67%_center]"
-          fetchPriority="high"
-        />
+        {/* Mobile image banner */}
+        <div className="relative h-[42svh] min-h-[280px] max-h-[420px] sm:absolute sm:inset-0 sm:h-full sm:max-h-none">
+          <img
+            src={heroImage}
+            alt="Viorica Lungu, makeup artist"
+            className="size-full object-cover object-[60%_center] sm:object-[67%_center]"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-hero-shade" />
+        </div>
 
-        <div className="absolute inset-0 bg-hero-shade" />
-
-        <div className="relative mx-auto flex min-h-[780px] max-w-[90rem] flex-col justify-end px-5 pb-16 pt-40 sm:min-h-[92svh] sm:px-10 sm:pb-14 sm:pt-44 lg:px-16">
+        {/* Text below image on mobile */}
+        <div className="relative mx-auto flex max-w-[90rem] flex-col px-5 pb-12 pt-8 sm:min-h-[92svh] sm:justify-end sm:px-10 sm:pb-14 sm:pt-44 lg:px-16">
           <p
             style={handwrittenStyle}
-            className="mb-4 text-lg text-hero-muted sm:mb-5 sm:text-2xl"
+            className="mb-4 text-lg text-hero-muted sm:text-2xl"
           >
             Makeup artist · Beauty storyteller
           </p>
 
-          <h1 className="max-w-5xl font-display text-[clamp(3.5rem,12vw,5.5rem)] leading-[0.9] sm:text-[clamp(4rem,8vw,9.5rem)] sm:leading-[0.8]">
+          <h1 className="max-w-5xl font-display text-5xl leading-[0.95] sm:text-[clamp(4rem,8vw,9.5rem)] sm:leading-[0.8]">
             Beauty,
             <br />
             <span className="font-display-italic">transformed.</span>
           </h1>
 
-          <div className="mt-7 grid gap-5 border-t border-hero-line pt-5 sm:mt-9 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:gap-7 sm:pt-7">
+          <div className="mt-6 grid gap-5 border-t border-hero-line pt-5 sm:mt-9 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:pt-7">
             <p
               style={handwrittenStyle}
               className="max-w-xl text-base leading-7 text-hero-muted sm:text-xl sm:leading-10"
