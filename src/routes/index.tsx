@@ -1,15 +1,15 @@
-
+```tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const editorialImage = "/img1.jpg";
-const heroImage = "/img2.jpg";
+const heroImage = "/vio.jpg";
 const portfolioBridal = "/img3.jpg";
 const portfolioCreative = "/img4.jpg";
 const portfolioDetail = "/img1.jpg";
 const portfolioOccasion = "/img2.jpg";
-const vioricaPortrait = "/img3.jpg";
+const vioricaPortrait = "/vio1.jpg";
 
 const handwrittenStyle = {
   fontFamily: "'Kaushan Script', cursive",
@@ -185,7 +185,7 @@ function Index() {
       >
         <img
           src={heroImage}
-          alt="Pearlescent editorial makeup with blue and violet reflections"
+          alt="Viorica Lungu, makeup artist"
           className="absolute inset-0 size-full object-cover object-[67%_center]"
           fetchPriority="high"
         />
@@ -406,7 +406,7 @@ function Index() {
           <div className="relative">
             <img
               src={vioricaPortrait}
-              alt="Portrait of makeup artist Viorica Lungu beside pink flowers"
+              alt="Viorica Lungu, makeup artist"
               className="aspect-[4/5] w-full object-cover"
             />
 
@@ -561,3 +561,4 @@ function Index() {
     </main>
   );
 }
+```
