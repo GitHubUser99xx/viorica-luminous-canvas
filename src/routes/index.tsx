@@ -67,24 +67,36 @@ return ( <main className="overflow-hidden bg-background text-foreground"> <heade
          className="min-w-0 font-display text-xl uppercase tracking-normal sm:text-2xl"
        >
 Viorica Lungu </a>
-      <nav
-        className="hidden items-center gap-9 text-xs font-semibold uppercase tracking-normal md:flex"
-        aria-label="Main navigation"
-      >
-        <a className="nav-link" href="#work">
-          Portfolio
-        </a>
-        <a className="nav-link" href="#about">
-          About
-        </a>
-        <a className="nav-link" href="#services">
-          Services
-        </a>
-        <a className="nav-link" href="#contact">
-          Contact
-        </a>
-      </nav>
-
+   ```tsx
+<nav
+  className="hidden items-center gap-8 text-sm font-semibold tracking-wide md:flex"
+  aria-label="Main navigation"
+>
+  <a
+    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    href="#work"
+  >
+    Portfolio
+  </a>
+  <a
+    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    href="#about"
+  >
+    About
+  </a>
+  <a
+    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    href="#services"
+  >
+    Services
+  </a>
+  <a
+    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    href="#contact"
+  >
+    Contact
+  </a>
+ </nav>
       <button
         type="button"
         className="grid size-11 place-items-center text-hero-foreground md:hidden"
@@ -455,7 +467,7 @@ Viorica Lungu </a>
       <p>Makeup artist · Beauty & editorial</p>
     </div>
 
-    <div className="mx-auto mt-4 max-w-[90rem] text-xs uppercase tracking-normal text-ink-muted/70">
+    <div className="mx-auto mt-4 max-w-[90rem] text-xs tracking-normal text-ink-muted/70">
       <p>
         Designed &amp; Developed by{" "}
         <a
