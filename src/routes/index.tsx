@@ -181,45 +181,36 @@ function Index() {
       {/* HERO: separate image and text on mobile; overlay on desktop */}
       <section
         id="top"
-        className="relative bg-background text-hero-foreground sm:min-h-[92svh] sm:bg-transparent"
+        className="relative overflow-hidden bg-[#171116] text-white"
       >
-        {/* Mobile image banner */}
-        <div className="relative h-[42svh] min-h-[280px] max-h-[420px] sm:absolute sm:inset-0 sm:h-full sm:max-h-none">
-          <img
-            src={heroImage}
-            alt="Viorica Lungu, makeup artist"
-            className="size-full object-cover object-[60%_center] sm:object-[67%_center]"
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0 bg-hero-shade" />
-        </div>
-
-        {/* Text below image on mobile */}
-        <div className="relative mx-auto flex max-w-[90rem] flex-col px-5 pb-12 pt-8 sm:min-h-[92svh] sm:justify-end sm:px-10 sm:pb-14 sm:pt-44 lg:px-16">
-          <p
-            style={handwrittenStyle}
-            className="mb-4 text-lg text-hero-muted sm:text-2xl"
-          >
-            Makeup artist · Beauty storyteller
-          </p>
-
-          <h1 className="max-w-5xl font-display text-5xl leading-[0.95] sm:text-[clamp(4rem,8vw,9.5rem)] sm:leading-[0.8]">
-            Beauty,
-            <br />
-            <span className="font-display-italic">transformed.</span>
-          </h1>
-
-          <div className="mt-6 grid gap-5 border-t border-hero-line pt-5 sm:mt-9 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:pt-7">
+        <div className="mx-auto grid min-h-[680px] max-w-[90rem] items-center gap-8 px-5 pb-10 pt-36 sm:px-10 sm:pb-16 sm:pt-44 lg:min-h-[760px] lg:grid-cols-[1fr_0.9fr] lg:gap-14 lg:px-16 lg:py-28">
+          {/* Text column */}
+          <div className="relative z-10 flex flex-col justify-center">
             <p
               style={handwrittenStyle}
-              className="max-w-xl text-base leading-7 text-hero-muted sm:text-xl sm:leading-10"
+              className="mb-5 text-lg text-rose-200 sm:text-2xl"
+            >
+              Makeup artist · Beauty storyteller
+            </p>
+
+            <h1 className="max-w-2xl font-display text-5xl leading-[1.05] sm:text-7xl lg:text-[5.5rem]">
+              Beauty,
+              <br />
+              <span className="font-display-italic text-rose-200">
+                transformed.
+              </span>
+            </h1>
+
+            <p
+              style={handwrittenStyle}
+              className="mt-7 max-w-lg text-lg leading-8 text-white/90 sm:text-xl sm:leading-10"
             >
               Refined makeup artistry created to reveal character, hold emotion
               and live beautifully in every light.
             </p>
 
             <a
-              className="group inline-flex w-fit items-center gap-3 border-b border-current pb-2 text-base font-bold transition-colors hover:text-amber-300 sm:text-lg"
+              className="group mt-8 inline-flex w-fit items-center gap-3 border-b border-rose-200 pb-2 text-lg font-bold text-white transition-colors hover:text-rose-200"
               style={handwrittenStyle}
               href="#contact"
             >
@@ -231,16 +222,19 @@ function Index() {
             </a>
           </div>
 
-          <a
-            href="#work"
-            aria-label="Explore portfolio"
-            className="absolute bottom-11 right-5 hidden size-12 place-items-center rounded-full border border-hero-line transition-colors hover:bg-hero-soft sm:grid lg:right-16"
-          >
-            <ArrowDown className="size-4" aria-hidden="true" />
-          </a>
+          {/* Image column: never behind the text */}
+          <div className="relative h-[360px] overflow-hidden sm:h-[500px] lg:h-[600px]">
+            <img
+              src={heroImage}
+              alt="Viorica Lungu, makeup artist"
+              className="size-full object-cover object-[60%_center]"
+              fetchPriority="high"
+            />
+            <div className="pointer-events-none absolute inset-0 border border-white/10" />
+          </div>
         </div>
       </section>
-
+      
       <section id="work" className="bg-surface py-24 sm:py-32">
         <div className="mx-auto max-w-[90rem] px-5 sm:px-10 lg:px-16">
           <div className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1fr_2fr] lg:items-end">
