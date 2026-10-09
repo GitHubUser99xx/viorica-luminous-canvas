@@ -67,36 +67,35 @@ return ( <main className="overflow-hidden bg-background text-foreground"> <heade
          className="min-w-0 font-display text-xl uppercase tracking-normal sm:text-2xl"
        >
 Viorica Lungu </a>
-   ```tsx
 <nav
-  className="hidden items-center gap-8 text-sm font-semibold tracking-wide md:flex"
+  className="hidden items-center gap-8 text-base font-semibold tracking-wide md:flex"
   aria-label="Main navigation"
 >
   <a
-    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
     href="#work"
   >
     Portfolio
   </a>
   <a
-    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
     href="#about"
   >
     About
   </a>
   <a
-    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
     href="#services"
   >
     Services
   </a>
   <a
-    className="nav-link bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_0_8px_rgba(244,114,182,0.35)]"
+    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
     href="#contact"
   >
     Contact
   </a>
- </nav>
+</nav>
       <button
         type="button"
         className="grid size-11 place-items-center text-hero-foreground md:hidden"
