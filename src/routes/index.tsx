@@ -68,35 +68,25 @@ return ( <main className="overflow-hidden bg-background text-foreground"> <heade
        >
 Viorica Lungu </a>
 <nav
-  className="hidden items-center gap-8 text-base font-semibold tracking-wide md:flex"
+  className="hidden items-center gap-10 text-lg font-semibold tracking-wide md:flex"
   aria-label="Main navigation"
 >
-  <a
-    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
-    href="#work"
-  >
-    Portfolio
-  </a>
-  <a
-    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
-    href="#about"
-  >
-    About
-  </a>
-  <a
-    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
-    href="#services"
-  >
-    Services
-  </a>
-  <a
-    className="nav-link text-foreground transition-colors duration-200 hover:text-rose-400 [&:active]:text-fuchsia-500"
-    href="#contact"
-  >
-    Contact
-  </a>
+  {[
+    { label: "Portfolio", href: "#work" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Contact", href: "#contact" },
+  ].map((item) => (
+    <a
+      key={item.href}
+      className="nav-link bg-gradient-to-r from-rose-400 via-pink-300 to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:from-amber-300 hover:via-rose-400 hover:to-fuchsia-400 hover:drop-shadow-[0_2px_8px_rgba(244,114,182,0.45)]"
+      href={item.href}
+    >
+      {item.label}
+    </a>
+  ))}
 </nav>
-      <button
+     <button
         type="button"
         className="grid size-11 place-items-center text-hero-foreground md:hidden"
         aria-label={menuOpen ? "Close menu" : "Open menu"}
