@@ -11,6 +11,11 @@ const portfolioDetail = "/img1.jpg";
 const portfolioOccasion = "/img2.jpg";
 const vioricaPortrait = "/img3.jpg";
 
+const handwrittenStyle = {
+  fontFamily: "'Kaushan Script', cursive",
+  fontWeight: 600,
+};
+
 const navigation = [
   { label: "Portfolio", href: "#work" },
   { label: "About", href: "#about" },
@@ -80,66 +85,63 @@ function Index() {
     setMenuOpen(false);
   };
 
-  const brandStyle = {
-    fontFamily: "'Kaushan Script', cursive",
-    fontWeight: 700,
-  };
-
-  const navigationStyle = (href: string) =>
-    `nav-link relative inline-block bg-clip-text text-transparent transition-all duration-300 ${
+  const navigationClass = (href: string) =>
+    `inline-block text-xl font-bold transition-all duration-300 lg:text-2xl ${
       activeMenu === href
-        ? "bg-gradient-to-r from-fuchsia-500 via-rose-500 to-amber-400 drop-shadow-[0_2px_10px_rgba(244,114,182,0.35)]"
-        : "bg-gradient-to-r from-rose-300 via-amber-200 to-rose-300 hover:from-fuchsia-500 hover:via-rose-500 hover:to-amber-400 hover:drop-shadow-[0_2px_8px_rgba(244,114,182,0.4)]"
+        ? "text-amber-300 drop-shadow-[0_2px_8px_rgba(251,191,36,0.3)]"
+        : "text-rose-200 hover:text-fuchsia-300"
     }`;
 
   return (
     <main className="overflow-hidden bg-background text-foreground">
       <header className="absolute inset-x-0 top-0 z-30 border-b border-hero-line text-hero-foreground">
-        <div className="mx-auto grid h-20 max-w-[90rem] grid-cols-[minmax(0,1fr)_auto] items-center px-5 sm:h-24 sm:px-10 lg:px-16">
-          <a
-            href="#top"
-            onClick={() => setActiveMenu("#top")}
-            aria-label="Viorica Lungu home"
-            className="group flex min-w-0 items-center gap-2.5 sm:gap-3"
-          >
-            <span
-              aria-hidden="true"
-              className="text-3xl leading-none transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 sm:text-4xl"
+        <div className="mx-auto flex min-h-24 max-w-[90rem] items-center justify-between gap-4 px-5 py-4 sm:px-10 lg:px-16">
+          <div className="flex min-w-0 flex-col items-start gap-3">
+            <a
+              href="#top"
+              onClick={() => setActiveMenu("#top")}
+              aria-label="Viorica Lungu home"
+              className="group flex items-center gap-2 sm:gap-3"
             >
-              🦋
-            </span>
-            <span
-              style={brandStyle}
-              className="bg-gradient-to-r from-rose-400 via-fuchsia-300 to-amber-300 bg-clip-text text-transparent text-2xl leading-tight drop-shadow-[0_2px_8px_rgba(244,114,182,0.2)] transition-all duration-300 group-hover:from-amber-300 group-hover:via-rose-400 group-hover:to-fuchsia-400 sm:text-3xl lg:text-4xl"
-            >
-              Viorica Lungu
-            </span>
-          </a>
-
-          <nav
-            className="hidden items-center gap-8 text-xl font-bold tracking-wide lg:gap-10 lg:text-2xl md:flex"
-            aria-label="Main navigation"
-          >
-            {navigation.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                aria-current={activeMenu === item.href ? "location" : undefined}
-                onClick={() => setActiveMenu(item.href)}
-                className={`${navigationStyle(item.href)} after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-full after:origin-left after:bg-gradient-to-r after:from-fuchsia-500 after:to-amber-400 after:transition-transform after:duration-300 ${
-                  activeMenu === item.href
-                    ? "after:scale-x-100"
-                    : "after:scale-x-0 hover:after:scale-x-100"
-                }`}
+              <span
+                aria-hidden="true"
+                className="text-3xl leading-none transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 sm:text-4xl"
               >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+                🦋
+              </span>
+
+              <span
+                style={handwrittenStyle}
+                className="bg-gradient-to-r from-rose-400 via-fuchsia-300 to-amber-300 bg-clip-text text-3xl leading-tight text-transparent drop-shadow-[0_2px_8px_rgba(244,114,182,0.2)] transition-all duration-300 group-hover:from-amber-300 group-hover:via-rose-400 group-hover:to-fuchsia-400 sm:text-4xl lg:text-5xl"
+              >
+                Viorica Lungu
+              </span>
+            </a>
+
+            <nav
+              className="hidden flex-wrap items-center gap-x-7 gap-y-3 md:flex lg:gap-x-9"
+              aria-label="Main navigation"
+            >
+              {navigation.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  aria-current={
+                    activeMenu === item.href ? "location" : undefined
+                  }
+                  onClick={() => setActiveMenu(item.href)}
+                  className={navigationClass(item.href)}
+                  style={handwrittenStyle}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
 
           <button
             type="button"
-            className="grid size-11 place-items-center text-hero-foreground md:hidden"
+            className="grid size-11 shrink-0 place-items-center text-hero-foreground md:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
@@ -157,10 +159,7 @@ function Index() {
             className="border-t border-hero-line bg-overlay px-5 py-7 sm:px-10 md:hidden"
             aria-label="Mobile navigation"
           >
-            <div
-              className="flex flex-col gap-5"
-              style={brandStyle}
-            >
+            <div className="flex flex-col items-start gap-5">
               {navigation.map((item) => (
                 <a
                   key={item.href}
@@ -169,7 +168,8 @@ function Index() {
                     activeMenu === item.href ? "location" : undefined
                   }
                   onClick={() => closeMenu(item.href)}
-                  className={`${navigationStyle(item.href)} w-fit text-3xl sm:text-4xl`}
+                  className={navigationClass(item.href)}
+                  style={handwrittenStyle}
                 >
                   {item.label}
                 </a>
@@ -192,8 +192,11 @@ function Index() {
 
         <div className="absolute inset-0 bg-hero-shade" />
 
-        <div className="relative mx-auto flex min-h-[92svh] max-w-[90rem] flex-col justify-end px-5 pb-10 pt-32 sm:px-10 sm:pb-14 lg:px-16">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-normal text-hero-muted sm:text-sm">
+        <div className="relative mx-auto flex min-h-[92svh] max-w-[90rem] flex-col justify-end px-5 pb-10 pt-40 sm:px-10 sm:pb-14 sm:pt-44 lg:px-16">
+          <p
+            style={handwrittenStyle}
+            className="mb-5 text-xl text-hero-muted sm:text-2xl"
+          >
             Makeup artist · Beauty storyteller
           </p>
 
@@ -204,18 +207,22 @@ function Index() {
           </h1>
 
           <div className="mt-9 grid gap-7 border-t border-hero-line pt-7 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-            <p className="max-w-md text-sm leading-7 text-hero-muted sm:text-base">
+            <p
+              style={handwrittenStyle}
+              className="max-w-xl text-lg leading-9 text-hero-muted sm:text-xl sm:leading-10"
+            >
               Refined makeup artistry created to reveal character, hold emotion
               and live beautifully in every light.
             </p>
 
             <a
-              className="group inline-flex w-fit items-center gap-3 border-b border-current pb-2 text-xs font-bold uppercase tracking-normal"
+              className="group inline-flex w-fit items-center gap-3 border-b border-current pb-2 text-lg font-bold transition-colors hover:text-amber-300"
+              style={handwrittenStyle}
               href="#contact"
             >
               Book an appointment
               <ArrowUpRight
-                className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                className="size-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
                 aria-hidden="true"
               />
             </a>
@@ -255,7 +262,10 @@ function Index() {
             </figure>
 
             <div className="pb-3 lg:pb-12">
-              <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
+              <p
+                style={handwrittenStyle}
+                className="mb-8 max-w-xl text-lg leading-9 text-muted-foreground sm:text-xl sm:leading-10"
+              >
                 Each look begins with the person—not a trend. Skin remains
                 alive, details feel intentional, and every finish is shaped
                 for the moment.
@@ -270,7 +280,10 @@ function Index() {
 
           <div className="mt-24 grid gap-8 lg:grid-cols-[.75fr_1.25fr] lg:items-end">
             <div className="pb-3 lg:pb-12 lg:text-right">
-              <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground lg:ml-auto">
+              <p
+                style={handwrittenStyle}
+                className="mb-8 max-w-xl text-lg leading-9 text-muted-foreground sm:text-xl sm:leading-10 lg:ml-auto"
+              >
                 A bridal look that stays weightless through every embrace,
                 toast and tear—soft light, real skin, quiet confidence.
               </p>
@@ -319,7 +332,10 @@ function Index() {
             </figure>
 
             <div className="pb-3 lg:pb-12">
-              <p className="mb-8 max-w-md text-lg leading-8 text-ink-muted">
+              <p
+                style={handwrittenStyle}
+                className="mb-8 max-w-xl text-lg leading-9 text-ink-muted sm:text-xl sm:leading-10"
+              >
                 Concept work where pigment, texture and gold leaf are composed
                 like jewellery—made to hold the frame and stop the scroll.
               </p>
@@ -366,7 +382,10 @@ function Index() {
               </figure>
 
               <div className="pb-3">
-                <p className="mb-8 max-w-md text-lg leading-8 text-muted-foreground">
+                <p
+                  style={handwrittenStyle}
+                  className="mb-8 max-w-xl text-lg leading-9 text-muted-foreground sm:text-xl sm:leading-10"
+                >
                   From gala evenings to intimate portraits—warm, radiant
                   finishes built on flawless blending and a highlight that
                   catches every candle.
@@ -391,7 +410,10 @@ function Index() {
               className="aspect-[4/5] w-full object-cover"
             />
 
-            <p className="absolute bottom-0 right-0 bg-background px-5 py-4 text-xs uppercase tracking-normal">
+            <p
+              style={handwrittenStyle}
+              className="absolute bottom-0 right-0 bg-background px-5 py-4 text-xl"
+            >
               Viorica Lungu
             </p>
           </div>
@@ -407,7 +429,10 @@ function Index() {
               </span>
             </h2>
 
-            <div className="mt-10 max-w-2xl space-y-5 text-base leading-8 text-muted-foreground sm:text-lg">
+            <div
+              style={handwrittenStyle}
+              className="mt-10 max-w-2xl space-y-6 text-lg leading-9 text-muted-foreground sm:text-xl sm:leading-10"
+            >
               <p>
                 Viorica Lungu is a makeup artist with many years of experience
                 in artistic makeup design. Her work is guided by an instinct
@@ -424,12 +449,13 @@ function Index() {
             </div>
 
             <a
-              className="group mt-10 inline-flex w-fit items-center gap-3 border-b border-foreground pb-2 text-xs font-bold uppercase tracking-normal"
+              className="group mt-10 inline-flex w-fit items-center gap-3 border-b border-foreground pb-2 text-lg font-bold transition-colors hover:text-accent"
+              style={handwrittenStyle}
               href="#contact"
             >
               Work with Viorica
               <ArrowUpRight
-                className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                className="size-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
                 aria-hidden="true"
               />
             </a>
@@ -462,11 +488,17 @@ function Index() {
                   {service.number}
                 </span>
 
-                <h3 className="font-display text-3xl sm:text-4xl">
+                <h3
+                  className="text-3xl sm:text-4xl"
+                  style={handwrittenStyle}
+                >
                   {service.title}
                 </h3>
 
-                <p className="max-w-md text-sm leading-7 text-ink-muted transition-colors group-hover:text-ink-foreground">
+                <p
+                  style={handwrittenStyle}
+                  className="max-w-xl text-lg leading-9 text-ink-muted transition-colors group-hover:text-ink-foreground sm:text-xl sm:leading-10"
+                >
                   {service.text}
                 </p>
               </article>
@@ -493,11 +525,12 @@ function Index() {
 
             <a
               href="mailto:burnaby991@yahoo.ca?subject=Makeup%20booking%20enquiry"
-              className="group inline-flex size-36 items-center justify-center gap-2 rounded-full border border-accent-foreground text-center text-xs font-bold uppercase tracking-normal transition-colors hover:bg-accent-foreground hover:text-accent sm:size-44"
+              className="group inline-flex size-36 items-center justify-center gap-2 rounded-full border border-accent-foreground text-center text-lg font-bold transition-colors hover:bg-accent-foreground hover:text-accent sm:size-44"
+              style={handwrittenStyle}
             >
               Enquire now
               <ArrowUpRight
-                className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                className="size-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
                 aria-hidden="true"
               />
             </a>
@@ -506,7 +539,7 @@ function Index() {
       </section>
 
       <footer className="bg-ink px-5 py-8 text-ink-muted sm:px-10 lg:px-16">
-        <div className="mx-auto grid max-w-[90rem] gap-4 text-xs uppercase tracking-normal sm:grid-cols-[1fr_auto]">
+        <div className="mx-auto grid max-w-[90rem] gap-4 text-xs tracking-normal sm:grid-cols-[1fr_auto]">
           <p>© 2026 Viorica Lungu</p>
           <p>Makeup artist · Beauty & editorial</p>
         </div>
