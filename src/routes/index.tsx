@@ -1,4 +1,3 @@
-```tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -561,4 +560,3 @@ function Index() {
     </main>
   );
 }
-```
