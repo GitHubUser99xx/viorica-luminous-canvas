@@ -67,8 +67,6 @@ return ( <main className="overflow-hidden bg-background text-foreground"> <heade
          className="min-w-0 font-display text-xl uppercase tracking-normal sm:text-2xl"
        >
 Viorica Lungu </a>
-
-```
       <nav
         className="hidden items-center gap-9 text-xs font-semibold uppercase tracking-normal md:flex"
         aria-label="Main navigation"
@@ -472,7 +470,5 @@ Viorica Lungu </a>
     </div>
   </footer>
 </main>
-```
-
 );
 }
